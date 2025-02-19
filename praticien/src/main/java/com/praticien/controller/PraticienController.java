@@ -4,13 +4,17 @@ import com.praticien.model.Praticien;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/praticiens")
 public class PraticienController {
-    private List<Praticien> praticiens = new ArrayList<>();
+    private List<Praticien> praticiens = new ArrayList<>(Arrays.asList(
+            new Praticien(1L, "Timothy", "Riquiet", "Cardiologie")
+    ));
+
 
     /**
      * Récupère la liste de tous les praticiens.

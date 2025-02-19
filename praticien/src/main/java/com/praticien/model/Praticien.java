@@ -4,16 +4,16 @@ public class Praticien {
     private Long id;
     private String firstName;
     private String lastName;
-    private String specialty;
+    private String speciality;
 
     public Praticien() {
     }
 
-    public Praticien(Long id, String firstName, String lastName, String specialty) {
+    public Praticien(Long id, String firstName, String lastName, String speciality) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.specialty = specialty;
+        this.speciality = speciality;
     }
 
     // Getters et Setters
@@ -36,9 +36,9 @@ public class Praticien {
         this.lastName = lastName;
     }
     public String getSpecialty() {
-        return specialty;
+        return speciality;
     }
     public void setSpecialty(String specialty) {
-        this.specialty = specialty;
+        this.speciality = specialty;
     }
 }

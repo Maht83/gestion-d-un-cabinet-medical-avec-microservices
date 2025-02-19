@@ -13,8 +13,8 @@
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
-	<groupId>com.example</groupId>
-	<artifactId>patient-service</artifactId>
+	<groupId>com</groupId>
+	<artifactId>patient</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>patient</name>
 	<description>Service de gestion des patients</description>

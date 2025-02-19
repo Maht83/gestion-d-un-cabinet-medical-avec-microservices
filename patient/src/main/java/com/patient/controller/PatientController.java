@@ -4,6 +4,7 @@ import com.patient.model.Patient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -11,7 +12,10 @@ import java.util.Optional;
 @RequestMapping("/patients")
 public class PatientController {
 
-    private List<Patient> patients = new ArrayList<>();
+    private List<Patient> patients = new ArrayList<>(Arrays.asList(
+            new Patient(1L, "Julien", "Varupenne", 45)
+    ));
+
 
     /**
      * Récupère la liste de tous les patients.
