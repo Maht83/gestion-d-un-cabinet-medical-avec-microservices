@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: praticien-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: praticien
+  template:
+    metadata:
+      labels:
+        app: praticien
+    spec:
+      containers:
+        - name: praticien
+          image: praticien:1.0
+          ports:
+            - containerPort: 8082
+          env:
+            - name: SPRING_APPLICATION_NAME
+              value: "praticien"
+            - name: EUREKA_CLIENT_SERVICEURL_DEFAULTZONE
+              value: "http://eureka-service:8761/eureka/"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: praticien-service
+spec:
+  selector:
+    app: praticien
+  ports:
+    - protocol: TCP
+      port: 8082
+      targetPort: 8082
+  type: ClusterIP
