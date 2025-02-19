@@ -10,7 +10,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/patients")
 public class PatientController {
-    // Liste en mémoire pour stocker les patients (pour un prototype)
+
     private List<Patient> patients = new ArrayList<>();
 
     /**
@@ -49,7 +49,7 @@ public class PatientController {
             patient.setAge(updatedPatient.getAge());
             return patient;
         }
-        // Dans un projet réel, il serait préférable de renvoyer une erreur HTTP 404 ici.
+
         return null;
     }
 
